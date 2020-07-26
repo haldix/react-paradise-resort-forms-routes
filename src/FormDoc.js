@@ -12,10 +12,10 @@ const FormDoc = ({ handleData }) => {
     payment: 'Lifetime',
     comments: '',
   };
+
   const [data, setData] = useState(initVal);
 
   const handleChange = (e) => {
-    console.log(e.target.type, 'type');
     let val;
     e.target.type === 'checkbox'
       ? (val = e.target.checked)
@@ -188,7 +188,7 @@ const FormDoc = ({ handleData }) => {
             name='comments'
             value={data.comments}
             onChange={handleChange}
-            placeholder='please leave any comments here..'
+            placeholder='please leave any comments here...'
           />
         </div>
         <div className='input-group'>

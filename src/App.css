@@ -83,3 +83,26 @@ textarea {
 .list-clients {
   list-style: none;
 }
+
+/* NavBar */
+a {
+  text-decoration: none;
+}
+
+.is-active {
+  text-decoration: underline;
+}
+
+.navbar {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: lightblue;
+  padding: 0.5rem;
+}
+
+.home h1 {
+  text-align: center;
+  margin-top: 2rem;
+}
