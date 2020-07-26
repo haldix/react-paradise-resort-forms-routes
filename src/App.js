@@ -5,6 +5,7 @@ import ClientList from './ClientList';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './NavBar';
 import Home from './Home';
+import Contact from './Contact';
 
 const initClients = JSON.parse(localStorage.getItem('clients')) || [];
 
@@ -35,6 +36,7 @@ function App() {
             path='/clients'
             render={() => <ClientList clients={clients} />}
           />
+          <Route exact path='/contact' component={Contact} />
         </Switch>
       </Router>
     </div>

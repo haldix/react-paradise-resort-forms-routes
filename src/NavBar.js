@@ -13,6 +13,9 @@ const NavBar = () => {
       <NavLink to='/clients' exact activeClassName='is-active'>
         Clients
       </NavLink>
+      <NavLink to='/contact' exact activeClassName='is-active'>
+        Contact
+      </NavLink>
     </nav>
   );
 };

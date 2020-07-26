@@ -45,6 +45,7 @@ ul {
 }
 
 .form-main {
+  font-weight: 700;
   width: 500px;
   background-color: #f6f6f6;
   border: 1px solid #ccc;
@@ -174,4 +175,42 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+// Contact
+.contact {
+  position: relative;
+  color: #fff;
+  height: calc(100vh - 2.5rem);
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+  //   url(./images/beach.jpg);
+  // background-position: center;
+  // background-size: cover;
+  @include flex-center;
+  flex-direction: column;
+
+  h1 {
+    margin-top: 3rem;
+  }
+
+  p {
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+    url(./images/beach.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: blur(1px);
 }
