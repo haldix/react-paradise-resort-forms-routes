@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+import './App.scss';
 import FormDoc from './FormDoc';
 import ClientList from './ClientList';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';

@@ -33,6 +33,7 @@ const FormDoc = ({ handleData }) => {
 
   return (
     <div className='container'>
+      <h2>Sign Up Today!</h2>
       <form className='form-main' onSubmit={handleSubmit}>
         <div className='input-group'>
           <label htmlFor='first-name' className='label'>

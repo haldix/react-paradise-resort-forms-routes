@@ -1,0 +1,156 @@
+$color-dark: hsl(240, 47%, 20%);
+$color-light: rgb(161, 209, 227);
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $color-dark;
+  background-color: $color-light;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 2rem auto;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.form-main {
+  width: 500px;
+  background-color: #f6f6f6;
+  border: 1px solid #ccc;
+  padding: 1.2rem;
+  border-radius: 0.4rem;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+
+  &__btn {
+    border: none;
+    border-radius: 0.2em;
+    padding: 0.3em 0.7em;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #f00;
+    margin-top: 1rem;
+    transition: all 0.3s ease-in;
+  }
+
+  &__btn:hover {
+    background-color: #c33;
+  }
+}
+
+.label {
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  width: 100%;
+  background-color: rgb(209, 229, 236);
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  padding: 0.3em;
+  border: 2px solid $color-dark;
+  border-radius: 0.3em;
+  outline: none;
+}
+
+input[type='text']:focus,
+input[type='number']:focus,
+textarea:focus {
+  border-width: 2.5px;
+  box-shadow: 0 3px 5px;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+  margin: 0 0.5rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+fieldset {
+  min-width: 0;
+  border: 1px solid rgb(174, 174, 174);
+  margin-bottom: 1rem;
+}
+
+legend {
+  margin-bottom: 0.5rem;
+}
+
+/* ClientList */
+.ClientList.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* NavBar */
+.is-active {
+  text-decoration: underline;
+}
+
+.navbar {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $color-dark;
+  height: 2.5rem;
+}
+
+.navbar a {
+  color: $color-light;
+  transition: all 0.3s ease-in;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+/* Home */
+.home {
+  height: calc(100vh - 2.5rem);
+  background-image: url(./images/resort.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home h1 {
+  padding-top: 2rem;
+  color: #fff;
+}

@@ -1,3 +1,5 @@
+Main purpose of this app is to use all form input types in the FormDoc component.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
