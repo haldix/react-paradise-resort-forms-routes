@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+
 $color-dark: hsl(240, 47%, 20%);
 $color-light: rgb(161, 209, 227);
 
@@ -14,6 +16,7 @@ $color-light: rgb(161, 209, 227);
 }
 
 body {
+  font-family: 'Montserrat', sans-serif;
   color: $color-dark;
   background-color: $color-light;
 }
@@ -153,4 +156,22 @@ legend {
 .home h1 {
   padding-top: 2rem;
   color: #fff;
+}
+
+// Table
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
 }

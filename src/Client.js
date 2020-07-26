@@ -1,27 +1,30 @@
 import React from 'react';
 
 const Client = ({ client }) => {
+  const {
+    firstName,
+    lastName,
+    age,
+    gender,
+    dining,
+    pool,
+    fitness,
+    payment,
+    comments,
+  } = client;
   return (
-    <li className='list-item'>
-      <h3>
-        {client.firstName} {client.lastName}
-      </h3>
-      <p>
-        Age: {client.age} Gender: {client.gender}
-      </p>
-      <h4>Privleges</h4>
-      {client.dining && <p>Dining</p>}
-      {client.fitness && <p>Fitness Center</p>}
-      {client.pool && <p>Swimming Pool</p>}
-      <h4>Payment Plan</h4>
-      {client.payment}
-      {client.comments && (
-        <>
-          <h4>Comments</h4>
-          <p>{client.comments}</p>
-        </>
-      )}
-    </li>
+    <tr>
+      <td>
+        {firstName} {lastName}
+      </td>
+      <td>{age}</td>
+      <td>{gender}</td>
+      <td>
+        {dining && 'dining'} {pool && 'pool'} {fitness && 'fitness'}
+      </td>
+      <td>{payment}</td>
+      <td>{comments}</td>
+    </tr>
   );
 };
 

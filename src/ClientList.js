@@ -5,11 +5,23 @@ const ClientList = ({ clients }) => {
   return (
     <div className='container ClientList'>
       <h2>Client Information</h2>
-      <ul className='list-clients'>
-        {clients.map((client) => (
-          <Client key={client.lastName} client={client} />
-        ))}
-      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Privleges</th>
+            <th>Payment Plan</th>
+            <th>Comments</th>
+          </tr>
+        </thead>
+        <tbody>
+          {clients.map((client, i) => (
+            <Client key={i} client={client} />
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };

@@ -24,7 +24,7 @@ function App() {
       <Router>
         <NavBar />
         <Switch>
-          <Route path='/' exact render={() => <Home />} />
+          <Route path='/' exact component={Home} />
           <Route
             exact
             path='/signup'
