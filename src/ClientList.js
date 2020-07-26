@@ -17,6 +17,14 @@ const ClientList = ({ clients }) => {
             {client.dining && <p>Dining</p>}
             {client.fitness && <p>Fitness Center</p>}
             {client.pool && <p>Swimming Pool</p>}
+            <h4>Payment Plan</h4>
+            {client.payment}
+            {client.comments && (
+              <>
+                <h4>Comments</h4>
+                <p>{client.comments}</p>
+              </>
+            )}
           </li>
         ))}
       </ul>

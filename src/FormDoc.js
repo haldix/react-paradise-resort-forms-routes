@@ -9,16 +9,19 @@ const FormDoc = ({ handleData }) => {
     dining: false,
     fitness: false,
     pool: false,
+    payment: 'Lifetime',
+    comments: '',
   };
   const [data, setData] = useState(initVal);
 
   const handleChange = (e) => {
-    console.log(e.target.checked);
-    setData({ ...data, [e.target.name]: e.target.value });
-  };
+    console.log(e.target.type, 'type');
+    let val;
+    e.target.type === 'checkbox'
+      ? (val = e.target.checked)
+      : (val = e.target.value);
 
-  const handleCheck = (e) => {
-    setData({ ...data, [e.target.name]: e.target.checked });
+    setData({ ...data, [e.target.name]: val });
   };
 
   const handleSubmit = (e) => {
@@ -117,7 +120,6 @@ const FormDoc = ({ handleData }) => {
         </fieldset>
         <fieldset>
           <legend>Privleges</legend>
-
           <div className='input-group'>
             <label htmlFor='dining' className='label'>
               <input
@@ -127,7 +129,7 @@ const FormDoc = ({ handleData }) => {
                 className='checkbox'
                 //value={data.dining}
                 checked={data.dining}
-                onChange={handleCheck}
+                onChange={handleChange}
               />
               Dining Room
             </label>
@@ -139,9 +141,8 @@ const FormDoc = ({ handleData }) => {
                 id='fitness'
                 name='fitness'
                 className='checkbox'
-                //value={data.fitness}
                 checked={data.fitness}
-                onChange={handleCheck}
+                onChange={handleChange}
               />
               Fitness Center
             </label>
@@ -154,14 +155,42 @@ const FormDoc = ({ handleData }) => {
                 id='pool'
                 name='pool'
                 className='checkbox'
-                //value={data.pool}
                 checked={data.pool}
-                onChange={handleCheck}
+                onChange={handleChange}
               />
               Swimming Pool
             </label>
           </div>
         </fieldset>
+        <div className='input-group'>
+          <label htmlFor='payment' className='label'>
+            Payment Plan
+          </label>
+          <select
+            id='payment'
+            name='payment'
+            value={data.payment}
+            onChange={handleChange}
+          >
+            <option>Lifetime</option>
+            <option>Three-year</option>
+            <option>Annual</option>
+            <option>Monthly</option>
+          </select>
+        </div>
+        <div className='input-group'>
+          <label htmlFor='comments' className='label'>
+            Comments
+          </label>
+          <textarea
+            rows='3'
+            id='comments'
+            name='comments'
+            value={data.comments}
+            onChange={handleChange}
+            placeholder='please leave any comments here..'
+          />
+        </div>
         <div className='input-group'>
           <button className='form-main__btn' type='submit'>
             Save

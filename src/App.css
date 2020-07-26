@@ -69,6 +69,12 @@ legend {
   background-color: #c33;
 }
 
+textarea {
+  padding: 0.4rem;
+  width: 100%;
+}
+
+/* ClientList */
 .ClientList.container {
   display: flex;
   flex-direction: column;
