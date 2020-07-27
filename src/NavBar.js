@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 const NavBar = () => {
   return (
     <nav className='navbar'>
+      <div className='logo'>Paradise Resort</div>
       <NavLink to='/' exact activeClassName='is-active'>
         Home
       </NavLink>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
 
 $color-dark: hsl(240, 47%, 20%);
 $color-light: rgb(161, 209, 227);
@@ -9,16 +10,12 @@ $color-light: rgb(161, 209, 227);
   justify-content: center;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: 'Montserrat', sans-serif;
-  color: $color-dark;
-  background-color: $color-light;
 }
 
 a {
@@ -37,6 +34,13 @@ ul {
   list-style: none;
 }
 
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: $color-dark;
+  background-color: $color-light;
+}
+
+// Elements
 .container {
   max-width: 1100px;
   margin: 2rem auto;
@@ -44,6 +48,54 @@ ul {
   flex-direction: column;
 }
 
+/* NavBar */
+.is-active {
+  text-decoration: underline;
+}
+
+.navbar {
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $color-dark;
+  height: 2.5rem;
+
+  & .logo {
+    font-family: 'Courgette', cursive;
+    text-transform: capitalize;
+    margin-right: 10%;
+    color: rgb(255, 149, 130);
+    font-size: 1.5rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.navbar a {
+  color: $color-light;
+  transition: all 0.3s ease-in;
+}
+
+.navbar a:hover {
+  color: #fff;
+}
+
+/* Home */
+.home {
+  height: calc(100vh - 2.5rem);
+  background-image: url(./images/resort.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home h1 {
+  padding-top: 2rem;
+  color: #fff;
+}
+
+// FormDoc
 .form-main {
   font-weight: 700;
   width: 500px;
@@ -122,44 +174,7 @@ legend {
   flex-direction: column;
 }
 
-/* NavBar */
-.is-active {
-  text-decoration: underline;
-}
-
-.navbar {
-  font-weight: bold;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: $color-dark;
-  height: 2.5rem;
-}
-
-.navbar a {
-  color: $color-light;
-  transition: all 0.3s ease-in;
-}
-
-.navbar a:hover {
-  color: #fff;
-}
-/* Home */
-.home {
-  height: calc(100vh - 2.5rem);
-  background-image: url(./images/resort.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.home h1 {
-  padding-top: 2rem;
-  color: #fff;
-}
-
-// Table
+// Client
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -182,10 +197,6 @@ tr:nth-child(even) {
   position: relative;
   color: #fff;
   height: calc(100vh - 2.5rem);
-  // background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-  //   url(./images/beach.jpg);
-  // background-position: center;
-  // background-size: cover;
   @include flex-center;
   flex-direction: column;
 
@@ -198,19 +209,19 @@ tr:nth-child(even) {
     font-size: 1.3rem;
     margin-bottom: 0.4rem;
   }
-}
 
-.contact::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
-    url(./images/beach.jpg);
-  background-position: center;
-  background-size: cover;
-  filter: blur(1px);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)),
+      url(./images/beach.jpg);
+    background-position: center;
+    background-size: cover;
+    filter: blur(1px);
+  }
 }
