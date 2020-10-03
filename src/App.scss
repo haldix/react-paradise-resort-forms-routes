@@ -75,10 +75,10 @@ body {
 .navbar a {
   color: $color-light;
   transition: all 0.3s ease-in;
-}
 
-.navbar a:hover {
-  color: #fff;
+  &:hover {
+    color: #fff;
+  }
 }
 
 /* Home */
@@ -114,10 +114,10 @@ body {
     background-color: #f00;
     margin-top: 1rem;
     transition: all 0.3s ease-in;
-  }
 
-  &__btn:hover {
-    background-color: #c33;
+    &:hover {
+      background-color: #c33;
+    }
   }
 }
 
@@ -131,11 +131,6 @@ input[type='number'],
 textarea {
   width: 100%;
   background-color: rgb(209, 229, 236);
-}
-
-input[type='text'],
-input[type='number'],
-textarea {
   padding: 0.3em;
   border: 2px solid $color-dark;
   border-radius: 0.3em;
@@ -185,11 +180,11 @@ td,
 th {
   border: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: 0.5rem;
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #ddd;
 }
 
 // Contact

@@ -128,7 +128,6 @@ const FormDoc = ({ handleData }) => {
                 id='dining'
                 name='dining'
                 className='checkbox'
-                //value={data.dining}
                 checked={data.dining}
                 onChange={handleChange}
               />
